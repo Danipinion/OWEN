@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OWEN - Organic Waste Energy - Notifikasi</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f3f4f6; /* Light gray background */
+        overflow: hidden;
+      }
+
+      /* Keyframes untuk Slide-In dari Kiri */
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-slideInLeft {
+        animation: slideInLeft 0.3s ease-out forwards;
+      }
+
+      /* Keyframes untuk Fade-In */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-fadeIn {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Keyframes untuk animasi Slide-In dari bawah dengan Bounce */
+      @keyframes slideInBottomBounce {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+        80% {
+          transform: translateY(5px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slideInBottomBounce {
+        animation: slideInBottomBounce 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div class="bg-green-600 p-4 flex items-center justify-center shadow-md">
+      <h1 class="text-white text-lg font-semibold animate-fadeIn">
+        Notifikasi
+      </h1>
+      <div class="w-6 h-6"></div>
+    </div>
+
+    <div
+      class="container max-w-md mx-auto p-4 space-y-4 flex-grow overflow-y-auto"
+    >
+      <div
+        class="bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded shadow-sm animate-slideInLeft"
+        style="animation-delay: 0.1s"
+      >
+        <div class="flex items-center space-x-2 mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-6 h-6 text-yellow-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v2m0 2h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+          <h2 class="font-semibold text-yellow-700">
+            Nutrisi air garam rendah!
+          </h2>
+        </div>
+        <p class="text-gray-700 text-sm mb-1">
+          Sistem akan mengisi ulang secara otomatis.
+        </p>
+        <p class="text-gray-500 text-xs">12:51 WIB - 2 Mei 2025</p>
+      </div>
+
+      <div
+        class="bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded shadow-sm animate-slideInLeft"
+        style="animation-delay: 0.3s"
+      >
+        <div class="flex items-center space-x-2 mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-6 h-6 text-yellow-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v2m0 2h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+          <h2 class="font-semibold text-yellow-700">
+            Air limbah terlalu keruh!
+          </h2>
+        </div>
+        <p class="text-gray-700 text-sm mb-1">
+          Sistem akan membuang secara otomatis.
+        </p>
+        <p class="text-gray-500 text-xs">12:48 WIB - 2 Mei 2025</p>
+      </div>
+
+      <div
+        class="bg-green-100 border-l-4 border-green-500 p-4 rounded shadow-sm animate-slideInLeft"
+        style="animation-delay: 0.5s"
+      >
+        <div class="flex items-center space-x-2 mb-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            class="w-6 h-6 text-green-500"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <h2 class="font-semibold text-green-700">
+            Kipas aktif: Suhu tinggi terdeteksi.
+          </h2>
+        </div>
+        <p class="text-gray-500 text-xs">12:46 WIB - 2 Mei 2025</p>
+      </div>
+
+      <div
+        class="bg-red-100 border-l-4 border-red-500 p-4 rounded shadow-sm animate-slideInLeft"
+        style="animation-delay: 0.7s"
+      >
+        <div class="flex items-center space-x-2 mb-2">
+          <svg
+            class="w-6 h-6 text-green-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#ff0000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"
+            ></path>
+          </svg>
+          <h2 class="font-semibold text-red-700">
+            Auto buang aktif, sistem terganggu.
+          </h2>
+        </div>
+        <p class="text-gray-700 text-sm">Harap periksa sistem lebih lanjut.</p>
+        <p class="text-gray-500 text-xs">Waktu tidak tersedia - 2 Mei 2025</p>
+      </div>
+    </div>
+    <div class="navigation bg-green-600 py-2 rounded-md shadow">
+      <div class="flex justify-around items-center">
+        <a
+          href="beranda.html"
+          class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-xl">🏠</span>
+            <span class="text-xs">Beranda</span>
+          </div>
+        </a>
+        <a
+          href="menu.html"
+          class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-xl">📊</span>
+            <span class="text-xs">Menu</span>
+          </div>
+        </a>
+        <a
+          href="notif.html"
+          class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-xl">🔔</span>
+            <span class="text-xs">Notifikasi</span>
+          </div>
+        </a>
+        <a
+          href="profile.html"
+          class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-xl">👤</span>
+            <span class="text-xs">Profil</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

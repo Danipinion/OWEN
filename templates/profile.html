@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OWEN - Organic Waste Energy</title>
+    <title>OWEN - Organic Waste Energy - Profil</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,58 +11,65 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f3f4f6; /* Light gray background seperti notifikasi */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 min-h-screen flex flex-col">
-    <div class="bg-green-600 p-4 flex items-center justify-between shadow-md">
-      <div></div>
+    <div class="bg-green-600 p-4 flex items-center justify-center shadow-md">
       <div class="logo">
-        <img src="owenn.png" alt="Logo OWEN" class="w-24" />
+        <img src="/static/owenn.png" alt="Logo OWEN" class="w-24" />
       </div>
       <div></div>
     </div>
 
     <div
-      class="container max-w-md mx-auto p-6 flex-1 flex flex-col justify-between"
+      class="container max-w-md mx-auto p-6 flex-1 flex flex-col justify-center items-center space-y-6"
     >
-      <div class="flex flex-col items-center justify-center space-y-6">
-        <h1 class="text-3xl font-bold text-green-600">Kategori Menu</h1>
-        <div class="grid grid-cols-2 gap-4 w-full">
-          <a
-            href="sensor.html"
-            class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg transition duration-200"
-          >
-            <p class="text-4xl">📡</p>
-            <span class="mt-2 font-semibold text-gray-700">Sensor</span>
-          </a>
-          <a
-            href="pasokan.html"
-            class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg transition duration-200"
-          >
-            <p class="text-4xl">📥</p>
-            <span class="mt-2 font-semibold text-gray-700">Pasokan</span>
-          </a>
-          <a
-            href="kipas.html"
-            class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg transition duration-200"
-          >
-            <p class="text-4xl">💨</p>
-            <span class="mt-2 font-semibold text-gray-700">Kipas</span>
-          </a>
-          <a
-            href="pembuangan.html"
-            class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center justify-center hover:shadow-lg transition duration-200"
-          >
-            <p class="text-4xl">♻</p>
-            <span class="mt-2 font-semibold text-gray-700">Pembuangan</span>
-          </a>
+      <div
+        class="bg-white shadow rounded-full w-32 h-32 flex items-center justify-center overflow-hidden"
+      >
+        <img
+          src="https://images.icon-icons.com/2859/PNG/512/avatar_face_man_boy_profile_smiley_happy_people_icon_181659.png"
+          alt="Foto Profil"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold text-gray-800">Pengguna Terdaftar</h2>
+        <p class="text-gray-600">example@email.com</p>
+      </div>
+      <div class="bg-white shadow rounded-md p-5 w-full">
+        <h3 class="text-lg font-semibold text-gray-700 mb-3">Informasi Akun</h3>
+        <div class="text-gray-600 text-sm space-y-2">
+          <div>
+            Nama Lengkap:
+            <span class="font-semibold text-gray-800">Nama Pengguna</span>
+          </div>
+          <div>
+            Nomor Telepon:
+            <span class="font-semibold text-gray-800">+62 8xx-xxxx-xxxx</span>
+          </div>
         </div>
       </div>
+      <a
+        href="login.html"
+        class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-200 ease-in-out"
+      >
+        Keluar
+      </a>
     </div>
 
     <div class="navigation bg-green-600 py-2 rounded-md shadow">
       <div class="flex justify-around items-center">
         <a
-          href="beranda.html"
+          href="{{ url_for('index') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -70,8 +77,9 @@
             <span class="text-xs">Beranda</span>
           </div>
         </a>
+
         <a
-          href="menu.html"
+          href="{{ url_for('menu') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -79,8 +87,9 @@
             <span class="text-xs">Menu</span>
           </div>
         </a>
+
         <a
-          href="notif.html"
+          href="{{ url_for('notif') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -88,8 +97,9 @@
             <span class="text-xs">Notifikasi</span>
           </div>
         </a>
+
         <a
-          href="profile.html"
+          href="{{ url_for('profil') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -99,5 +109,11 @@
         </a>
       </div>
     </div>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </body>
 </html>

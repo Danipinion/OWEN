@@ -41,32 +41,42 @@
   </head>
   <body class="bg-green-800 min-h-screen flex justify-center items-center">
     <div class="logo absolute top-4 right-2">
-      <img src="owenn.png" alt="Logo OWEN" class="w-24" />
+      <img src="/static/owenn.png" alt="Logo OWEN" class="w-24" />
     </div>
     <div
       class="container bg-white text-green-800 p-8 rounded-lg shadow-md w-96 animate-slideInBottomBounce"
     >
       <h1 class="text-3xl font-bold mb-6 text-center">DAFTAR</h1>
-      <form class="flex flex-col gap-4">
+      <form class="flex flex-col gap-4" method="POST">
+        <input
+          type="text"
+          placeholder="Nama"
+          name="nama"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
         <input
           type="email"
           placeholder="Email"
+          name="email"
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         <input
           type="password"
           placeholder="Password"
+          name="password"
           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
-        <a
-          href="login.html"
+        <button
+          type="submit"
           class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline text-center"
         >
           DAFTAR
-        </a>
+        </button>
       </form>
       <div class="mt-4 text-center">
-        <a href="login.html" class="text-green-600 hover:text-green-800 text-sm"
+        <a
+          href="{{ url_for('login') }}"
+          class="text-green-600 hover:text-green-800 text-sm"
           >Sudah punya akun? Masuk di sini</a
         >
       </div>

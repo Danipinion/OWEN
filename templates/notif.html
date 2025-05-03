@@ -194,7 +194,7 @@
     <div class="navigation bg-green-600 py-2 rounded-md shadow">
       <div class="flex justify-around items-center">
         <a
-          href="beranda.html"
+          href="{{ url_for('index') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -202,8 +202,9 @@
             <span class="text-xs">Beranda</span>
           </div>
         </a>
+
         <a
-          href="menu.html"
+          href="{{ url_for('menu') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -211,8 +212,9 @@
             <span class="text-xs">Menu</span>
           </div>
         </a>
+
         <a
-          href="notif.html"
+          href="{{ url_for('notif') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -220,8 +222,9 @@
             <span class="text-xs">Notifikasi</span>
           </div>
         </a>
+
         <a
-          href="profile.html"
+          href="{{ url_for('profil') }}"
           class="text-white transition duration-200 ease-in-out hover:scale-110 hover:animate-wobble"
         >
           <div class="flex flex-col items-center">
@@ -231,10 +234,5 @@
         </a>
       </div>
     </div>
-    <script>
-      function goBack() {
-        window.history.back();
-      }
-    </script>
   </body>
 </html>

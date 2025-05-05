@@ -174,7 +174,7 @@
 
       function updateData() {
         // Asumsi ada endpoint /data yang mengembalikan data sensor dalam format JSON
-        fetch("/data")
+        fetch("/latest_data")
           .then((response) => response.json())
           .then((data) => {
             updateSensorValue("suhu-nilai", data.suhu, " °C");

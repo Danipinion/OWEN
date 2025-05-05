@@ -12,7 +12,8 @@ def generate_random_data():
         "kelembaban": round(random.uniform(50, 80), 2),
         "tegangan": round(random.uniform(10, 14), 2),
         "turbidity": round(random.uniform(0, 100), 2),
-        "ph": round(random.uniform(6, 8), 2)
+        "ph": round(random.uniform(6, 8), 2),
+        "time": time.strftime("%Y-%m-%d %H:%M:%S")
     }
     return data
 

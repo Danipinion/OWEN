@@ -309,7 +309,7 @@
       }
 
       function updateData() {
-        fetch("/data")
+        fetch("/latest_data")
           .then((response) => response.json())
           .then((data) => {
             updateSensorValue("suhu-value", data.suhu, " °C");
